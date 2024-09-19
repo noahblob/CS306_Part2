@@ -32,4 +32,5 @@ x = df.iloc[:, :-1]
 y = df.iloc[:, -1]
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=0, stratify=y)
 
-joblib.dump((x_train, y_train), 'data.joblib')
+joblib.dump((x_train, y_train), 'train_data.joblib')
+joblib.dump((x_test, y_test), 'test_data.joblib')
