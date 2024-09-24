@@ -19,7 +19,7 @@ for category in categories:
     print(f'loading... category : {category}')
     for img in os.listdir(path):
         img_arr = imread(os.path.join(path,img))
-        img_resized = resize(img_arr, (30,30,3))
+        img_resized = resize(img_arr, (200,200,3))
         flat_data_arr.append(img_resized.flatten())
         target_arr.append(categories.index(category))
     print(f'loaded category: {category} successfully')
